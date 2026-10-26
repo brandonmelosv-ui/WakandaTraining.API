@@ -1,0 +1,18 @@
+# Arquivos gerados pelo .NET
+**/bin/
+**/obj/
+
+# Configurações locais do Visual Studio
+.vs/
+**/*.user
+**/*.suo
+
+# Bancos de dados locais
+**/*.db
+**/*.sqlite
+**/*.sqlite3
+**/*.db-shm
+**/*.db-wal
+
+# Configurações de desenvolvimento
+**/appsettings.Development.json

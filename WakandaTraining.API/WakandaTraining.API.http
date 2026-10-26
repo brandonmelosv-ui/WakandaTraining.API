@@ -1,0 +1,25 @@
+
+@WakandaTraining.API_HostAddress = http://localhost:5018
+
+### 1. Cadastrar usuário
+POST {{WakandaTraining.API_HostAddress}}/api/Usuarios/cadastro
+Content-Type: application/json
+
+{
+  "nome": "UsuarioTeste",
+  "email": "teste.pim@example.com",
+  "senha": "TreinoPim2026!"
+}
+
+### 2. Fazer login
+POST {{WakandaTraining.API_HostAddress}}/api/Usuarios/login
+Content-Type: application/json
+
+{
+  "email": "teste.pim@example.com",
+  "senha": "TreinoPim2026!"
+}
+
+### 3. Testar rota protegida
+GET {{WakandaTraining.API_HostAddress}}/api/Usuarios/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJXYWthbmRhVHJhaW5pbmcuRmx1dHRlciIsImlzcyI6Ildha2FuZGFUcmFpbmluZy5BUEkiLCJleHAiOjE3OTI5ODQ4MzIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiNCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJVc3VhcmlvVGVzdGUiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZS5waW1AZXhhbXBsZS5jb20iLCJpYXQiOjE3OTI5ODEyMzIsIm5iZiI6MTc5Mjk4MTIzMn0.BnaPXQGahzZKkIt6b-3ygbFQufO3sRJp_Z9mvObGc0Q
